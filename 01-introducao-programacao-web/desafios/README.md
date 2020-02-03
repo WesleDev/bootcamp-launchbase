@@ -22,12 +22,6 @@
   </a>
 </p>
 
-<p align="center">
-  <a href="#-desafios">Sobre os desafios</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-entrega">Entrega</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-licença">Licença</a>
-</p>
-
 ## 🚀 Desafios
 
 - [Primeiros passos com JavaScript](https://github.com/imsantosrodrigo/bootcamp-launchbase/tree/master/01-introducao-programacao-web/desafios/desafio-01-1)
