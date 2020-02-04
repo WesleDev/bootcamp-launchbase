@@ -1,0 +1,36 @@
+/* Fonte */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+/* Variáveis */
+:root {
+    --cor-roxa: rgb(113, 89, 193);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--cor-roxa);
+}
+
+header div a {
+    margin: 0 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+header div a:hover {
+    text-decoration: underline;
+}

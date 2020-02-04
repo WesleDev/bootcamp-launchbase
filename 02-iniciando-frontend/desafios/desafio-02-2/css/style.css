@@ -1,0 +1,83 @@
+/* Fonte */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+/* Variáveis */
+:root {
+    --cor-roxa: rgb(113, 89, 193);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--cor-roxa);
+}
+
+header div a {
+    margin: 0 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+header div a:hover {
+    text-decoration: underline;
+}
+
+/* Sobre */
+.conteudo {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.logo {
+    border: 5px solid var(--cor-roxa);
+    height: 350px;
+    width: 350px;
+    margin: 20px auto;
+    border-radius: 50%;
+}
+
+.logo img {
+    height: 250px;
+    width: 250px;
+    margin: 25px 0;
+}
+
+.conteudo p {
+    max-width: 500px;
+    margin: 32px auto;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.links {
+    margin: 25px 0;
+}
+
+.links a {
+    padding: 10px;
+    text-decoration: none;
+    border: 1px solid var(--cor-roxa);
+    border-radius: 10px;
+    color: var(--cor-roxa);
+    font-weight: bold;
+}
+
+.links a:hover {
+    border: 1px solid var(--cor-roxa);
+    padding: 10px;
+    background-color: var(--cor-roxa);
+    color: white;
+    border-radius: 10px;
+}
