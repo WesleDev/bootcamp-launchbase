@@ -20,6 +20,13 @@
 
 </p>
 
+<p align="center">
+  <a href="#file_cabinet-materiais">Materiais</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-desafios">Desafios</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#calendar-entrega">Entrega</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; 
+  <a href="#memo-licença">Licença</a>
+</p>
+
 ## :rocket: Desafios
 
 - [Primeiro HTML](https://github.com/imsantosrodrigo/bootcamp-launchbase/tree/master/02-iniciando-frontend/desafios/desafio-02-1)
