@@ -53,7 +53,7 @@ Esse desafio **não precisa ser entregue** e não receberá correção. Após co
 
 ## :memo: Licença
 
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](../LICENSE) para mais detalhes.
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](https://github.com/Rocketseat/bootcamp-launchbase-desafios-02/blob/master/LICENSE) para mais detalhes.
 
 ---
 
