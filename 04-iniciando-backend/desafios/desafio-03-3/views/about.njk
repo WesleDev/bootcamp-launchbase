@@ -1,0 +1,27 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Rocketseat - Sobre</title>
+{% endblock %}
+
+{% block content %}
+    <div class="conteudo">
+        <h1>{{ sobre.titulo }}</h1>
+        <div class="logo">
+            <img src="/img/{{ sobre.logo }}" alt="Logo da {{ sobre.titulo }}">
+        </div>
+        {% for linha in sobre.descricao %}
+            <p>{{ linha }}</p>
+        {% endfor %}
+        <ul>
+            {% for item in sobre.lista %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+        <div class="links">
+            {% for link in sobre.links %}
+                <a href="{{ link.url }}" target="_blank">{{ link.nome }}</a>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

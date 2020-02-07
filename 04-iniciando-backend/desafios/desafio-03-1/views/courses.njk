@@ -1,0 +1,64 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Rocketseat - Cursos</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <div class="conteudo">
+        <h1>Conteúdos</h1>
+        <section class="cursos">
+            <div class="curso" id="starter">
+                <div class="curso-img">
+                    <img src="/img/starter.svg" alt="">
+                </div>
+                <div class="curso-titulo">
+                    <p>Starter</p>
+                </div>
+                <div class="curso-info">
+                    <p>5 módulos</p>
+                    <p>Grátis</p>
+                </div>
+            </div>
+            <div class="curso" id="launchbase">
+                <div class="curso-img">
+                    <img src="/img/launchbase.svg" alt="">
+                </div>
+                <div class="curso-titulo">
+                    <p>LaunchBase</p>
+                </div>
+                <div class="curso-info">
+                    <p>8 módulos</p>
+                    <p>Pago</p>
+                </div>
+            </div>
+            <div class="curso" id="gostack">
+                <div class="curso-img">
+                    <img src="/img/gostack.svg" alt="">
+                </div>
+                <div class="curso-titulo">
+                    <p>GoStack</p>
+                </div>
+                <div class="curso-info">
+                    <p>10 módulos</p>
+                    <p>Pago</p>
+                </div>
+            </div>
+        </section>
+        <div class="modal-overlay">
+            <div class="modal">
+                <a class="maximize-modal">
+                    <i class="material-icons">maximize</i>
+                </a>
+                <a class="close-modal">
+                    <i class="material-icons">close</i>
+                </a>
+                <div class="modal-content">
+                    <iframe src="" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/scripts.js"></script>
+{% endblock %}
