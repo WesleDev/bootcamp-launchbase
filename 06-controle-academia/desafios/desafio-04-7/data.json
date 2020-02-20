@@ -1,0 +1,73 @@
+{
+    "students": [
+        {
+            "id": 1,
+            "avatar_url": "https://images.unsplash.com/photo-1503676382389-4809596d5290?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=755&q=80",
+            "name": "José Silva",
+            "birth": 642297600000,
+            "email": "joaosilva@email.com",
+            "school_year": "1EM",
+            "workload": "150"
+        },
+        {
+            "id": 2,
+            "avatar_url": "https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+            "name": "Maria Almeida",
+            "birth": 484531200000,
+            "email": "mariaalmeida@email.com",
+            "school_year": "6EF",
+            "workload": "50"
+        },
+        {
+            "id": 3,
+            "avatar_url": "https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+            "name": "Roberta Campos",
+            "birth": 484531200000,
+            "email": "robertacampos@email.com",
+            "school_year": "8EF",
+            "workload": "50"
+        }
+    ],
+    "teachers": [
+        {
+            "id": 1,
+            "avatar_url": "https://images.unsplash.com/photo-1525571453712-090270b8354f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+            "name": "Maria da Silva",
+            "birth": 581904000000,
+            "degree": "superior",
+            "type": "presencial",
+            "occupations": "Matemática",
+            "created_at": 1581533107449
+        },
+        {
+            "id": 2,
+            "avatar_url": "https://images.unsplash.com/photo-1543269664-76bc3997d9ea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+            "name": "Juliana de Castro",
+            "birth": 939513600000,
+            "degree": "doutorado",
+            "type": "distancia",
+            "occupations": "Química",
+            "created_at": 1581626560563
+        },
+        {
+            "id": 3,
+            "avatar_url": "https://images.unsplash.com/photo-1506919258185-6078bba55d2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=515&q=80",
+            "name": "Mario Sampaio",
+            "birth": 892166400000,
+            "degree": "mestrado",
+            "type": "presencial",
+            "occupations": "Física",
+            "created_at": 1581626589645
+        },
+        {
+            "id": 4,
+            "avatar_url": "https://images.unsplash.com/photo-1517971129774-8a2b38fa128e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
+            "name": "Camila do Carmo",
+            "birth": 486777600000,
+            "degree": "doutorado",
+            "type": "distancia",
+            "occupations": "História, Geografia",
+            "created_at": 1581705694297
+        }
+    ]
+}

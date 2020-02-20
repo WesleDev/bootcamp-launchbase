@@ -1,0 +1,41 @@
+{
+    "teachers": [
+        {
+            "id": 1,
+            "avatar_url": "http://www.google.com",
+            "name": "Maria Silva",
+            "birth": 329443200000,
+            "degree": "D",
+            "type": "Presencial",
+            "occupation": "Matemática",
+            "created_at": 1581533107449
+        },
+        {
+            "id": 2,
+            "avatar_url": "http://www.google.com",
+            "name": "José Silva",
+            "birth": 939513600000,
+            "degree": "M",
+            "type": "Presencial",
+            "created_at": 1581626560563
+        },
+        {
+            "id": 3,
+            "avatar_url": "http://www.google.com",
+            "name": "Tiago Maranhão",
+            "birth": 892166400000,
+            "degree": "EMC",
+            "type": "Presencial",
+            "created_at": 1581626589645
+        },
+        {
+            "id": 4,
+            "avatar_url": "http://www.google.com",
+            "name": "Magali de Souza",
+            "birth": 655516800000,
+            "degree": "ESC",
+            "type": "Distancia",
+            "created_at": 1581626614138
+        }
+    ]
+}

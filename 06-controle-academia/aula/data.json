@@ -1,0 +1,55 @@
+{
+    "members": [
+        {
+            "id": 1,
+            "avatar_url": "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=749&q=80",
+            "name": "Roberta Santos",
+            "email": "robertasantos@email.com",
+            "birth": 905212800000,
+            "gender": "F",
+            "blood": "B+",
+            "weight": "70",
+            "height": "175"
+        },
+        {
+            "id": 2,
+            "avatar_url": "https://images.unsplash.com/photo-1532029837206-abbe2b7620e3?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
+            "name": "José Amarantes",
+            "email": "joaseamarantes@email.com",
+            "birth": 596678400000,
+            "gender": "M",
+            "blood": "O+",
+            "weight": "98",
+            "height": "184"
+        }
+    ],
+    "instructors": [
+        {
+            "id": 1,
+            "avatar_url": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+            "name": "Maria Oliveira",
+            "birth": 592444800000,
+            "services": "Pilates",
+            "gender": "F",
+            "created_at": 1581521955039
+        },
+        {
+            "id": 2,
+            "avatar_url": "https://images.unsplash.com/photo-1532029837206-abbe2b7620e3?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
+            "name": "João Sampaio",
+            "birth": 704937600000,
+            "services": "Musculação, Natação",
+            "gender": "M",
+            "created_at": 1581521995244
+        },
+        {
+            "id": 3,
+            "avatar_url": "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=749&q=80",
+            "name": "Júlia Calcante",
+            "birth": 652752000000,
+            "services": "Crossfit",
+            "gender": "F",
+            "created_at": 1581522170399
+        }
+    ]
+}
