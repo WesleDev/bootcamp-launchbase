@@ -1,0 +1,26 @@
+{% extends "layout-website.njk" %}
+
+{% block head %}
+    <title>Foodfy - Receitas</title>
+{% endblock %}
+
+{% block links %}
+    <a href="/">Página Inicial</a>
+    <a href="/website/sobre">Sobre</a>
+    <a href="/website/receitas" class="nav-receitas">Receitas</a>
+{% endblock %}
+
+{% block content %}
+    <div class="receitas">
+        <div class="pratos">
+            {% for recipe in recipes %}
+                <div class="prato prato-cursor">
+                    <img src="{{ recipe.image }}" alt="{{ recipe.title }}">
+                    <p class="prato-titulo">{{ recipe.title }}</p>
+                    <p class="prato-chef">por {{ recipe.author }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <script src="/script.js"></script>
+{% endblock %}

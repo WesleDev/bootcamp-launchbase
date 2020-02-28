@@ -1,0 +1,58 @@
+<div class="posicao-botao-salvar">
+    <button type="submit" id="botao-salvar-receita">Salvar Receita</button>
+</div>
+<div class="item">
+    <div class="item-titulo">Título da Receita</div>
+    <div>
+        <input type="text" name="title" placeholder="Título da Receita" value="{{ recipe.title }}">
+    </div>
+</div>
+<div class="item">
+    <div class="item-titulo">Autor da Receita</div>
+    <div>
+        <input type="text" name="author" placeholder="Autor da Receita" value="{{ recipe.author }}">
+    </div>
+</div>
+<div class="item">
+    <div class="item-titulo">Imagem da Receita</div>
+    <div>
+        <input type="url" name="image" placeholder="http://" value="{{ recipe.image }}">
+    </div>
+</div>
+<div id="ingredients">
+    <div class="item-titulo-add-item">Ingredientes</div>
+    {% if recipe %}
+        {% for ingredient in recipe.ingredients %}
+            <div class="ingredient item-add-item">
+                <input id="input-ingrediente" type="text" name="ingredients[]" placeholder="Nome do Ingrediente" value="{{ ingredient }}">
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="ingredient item-add-item">
+            <input id="input-ingrediente" type="text" name="ingredients[]" placeholder="Nome do Ingrediente">
+        </div>
+    {% endif %}
+</div>
+<button type="button" class="add-ingredient">Adicionar novo ingrediente</button>
+<div id="preparations">
+    <div class="item-titulo-add-item">Modo de Preparo</div>
+    {% if recipe %}
+        {% for preparationitem in recipe.preparation %}
+            <div class="preparation item-add-item">
+                <input type="text" name="preparation[]" placeholder="Modo de Preparo" value="{{ preparationitem }}">
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="preparation item-add-item">
+            <input type="text" name="preparation[]" placeholder="Modo de Preparo">
+        </div>
+    {% endif %}
+</div>
+<button type="button" class="add-preparation">Adicionar novo passo</button>
+<div class="item">
+    <div class="item-titulo">Informações Adicionais</div>
+    <div>
+        <input type="text" name="information" placeholder="Informações" value="{{ recipe.information }}">
+    </div>
+</div>
+<script src="/script.js"></script>

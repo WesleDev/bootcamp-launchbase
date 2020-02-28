@@ -1,0 +1,37 @@
+{% extends "layout-recipes.njk" %}
+
+{% block head %}
+    <title>Foodfy - Editar Receita</title>
+{% endblock %}
+
+{% block header %}
+    <div class="title-page">
+        <h1>Editar Receita</h1>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="card">
+        <section class="details">
+            <form id="form-delete" method="POST" action="/admin/recipes?_method=DELETE">
+                <input type="hidden" name="id" value="{{ recipe.id }}">
+                <div class="posicao-botao-delete">
+                    <button type="submit">Deletar</button>
+                </div>
+            </form>
+            <form method="POST" action="/admin/recipes?_method=PUT">
+                {% include "admin/recipes/fields.njk" %}
+                <input type="hidden" name="id" value="{{ recipe.id }}">
+            </form>
+        </section>
+    </div>
+    <script>
+        const formDelete = document.querySelector('#form-delete');
+        formDelete.addEventListener('submit', function (event) {
+            const confirmation = confirm('Deseja Deletar?');
+            if (!confirmation) {
+                event.preventDefault();
+            }
+        });
+    </script>
+{% endblock content %}
