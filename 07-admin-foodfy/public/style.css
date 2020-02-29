@@ -9,6 +9,8 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/* Página Inicial */
+
 main {
     width: 940px;
     margin: 0 auto;
@@ -32,7 +34,7 @@ nav a {
     color: #111111;
 }
 
-.nav-receitas, .nav-sobre {
+.negrito-destaque-link {
     font-weight: bold;
 }
 
@@ -113,6 +115,8 @@ nav a {
     cursor: pointer;
 }
 
+/* Rodapé */
+
 footer {
     margin-top: 50px;
     background-color: #EEEEEE;
@@ -148,7 +152,7 @@ footer p {
     color: #111111;
 }
 
-/* Página Detalhes */
+/* Página Detalhes da Receita */
 
 .detalhes-receita-header {
     margin-top: 50px;
@@ -181,17 +185,29 @@ footer p {
     margin-top: 200px;
 }
 
-/* Editar apartir daqui */
-
 .detalhes-receita {
     margin: 50px 0;
 }
 
-.detalhes-receita h3 {
+.detalhes-receita-titulo {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.detalhes-receita-titulo h3 {
     font-size: 24px;
     font-weight: bold;
     color: #111111;
     margin-bottom: 20px;
+}
+
+.detalhes-receita-titulo h4 {
+    font-size: 12px;
+    font-weight: bold;
+    color: #999999;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 70px;
 }
 
 .detalhes-receita li {
@@ -206,34 +222,11 @@ footer p {
     color: #444444;
 }
 
-.detalhes-receita-titulo {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-}
-
-.detalhes-receita-titulo h3 {
-    padding: 0;
-}
-
-.detalhes-receita-titulo h4 {
-    font-size: 12px;
-    font-weight: bold;
-    color: #999999;
-    text-transform: uppercase;
-    cursor: pointer;
-    width: 70px;
-}
-
 .esconder-conteudo {
     display: none;
 }
 
-/* List - Admin */
-
-.title-page.position-buttons-action {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
+/* Página Inicial - Admin */
 
 .title-page h1 {
     font-size: 24px;
@@ -241,20 +234,20 @@ footer p {
     margin-top: 50px;
 }
 
-.pratos-list {
+.pratos-list-conteudo {
     margin-top: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
 
-.prato-list {
+.prato-list-item {
     display: grid;
     grid-template-columns: 172px 3fr;
     gap: 20px;
 }
 
-.prato-img-list img {
+.prato-list-img img {
     border-radius: 15px;
     width: 172px;
     height: 80px;
@@ -279,12 +272,7 @@ footer p {
     text-decoration: none;
 }
 
-.admin-create h1 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #111111;
-    margin-top: 55px;
-}
+/* Fields */
 
 .item {
     margin-top: 30px;
@@ -298,16 +286,6 @@ footer p {
     height: 49px;
     padding: 0 10px;
     box-sizing: border-box;
-}
-
-.item-add-item input {
-    border: 1px solid #dddddd;
-    border-radius: 4px;
-    background-color: #ffffff;
-    width: 940px;
-    height: 49px;
-    padding: 0 10px;
-    margin-top: 10px;
 }
 
 .item-titulo {
@@ -324,20 +302,17 @@ footer p {
     margin: 30px 0 10px;
 }
 
-.posicao-botao-salvar {
-    margin-top: auto;
-    margin-left: auto;
+.item-add-item input {
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    background-color: #ffffff;
+    width: 940px;
+    height: 49px;
+    padding: 0 10px;
+    margin-top: 10px;
 }
 
-.add-ingredient {
-    margin-top: 15px;
-    font-size: 16px;
-    color: #6558C3;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.add-preparation {
+.add-item {
     margin-top: 15px;
     font-size: 16px;
     color: #6558C3;
@@ -366,19 +341,11 @@ footer p {
     margin: 10px 0;
 }
 
-.posicao-botao-salvar {
+.postion-button-action {
     text-align: right;
 }
 
-.posicao-botao-delete {
-    text-align: right;
-}
-
-.posicao-botao-editar {
-    text-align: right;
-}
-
-.posicao-botao-editar a {
+.button-edit a {
     background-color: #6558C3;
     border-radius: 4px;
     width: 100px;
@@ -387,12 +354,4 @@ footer p {
     font-size: 16px;
     padding: 9px 20px;
     text-decoration: none;
-}
-
-.grupo-botoes-salvar-delete {
-    display: inline;
-}
-
-.grupo-botoes-delete {
-    margin-top: 5px;
 }

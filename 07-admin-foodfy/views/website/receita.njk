@@ -1,47 +1,52 @@
 {% extends "layout-website.njk" %}
 
 {% block head %}
-    <title>Foodfy - {{ recipe.title }}</title>
+    <title>Foodfy -
+        {{ recipe.title }}</title>
+{% endblock %}
+
+{% block links %}
+    <a href="/">Página Inicial</a>
+    <a href="/website/sobre">Sobre</a>
+    <a href="/website/receitas" class="negrito-destaque-link">Receitas</a>
 {% endblock %}
 
 {% block content %}
-    <div class="detalhes-receita">
-        <div class="detalhes-receita-header">
-            <img src="{{ recipe.image }}" alt="{{ recipe.title }}">
-            <h1>{{ recipe.title }}</h1>
-            <p>por {{ recipe.author }}</p>
-        </div>
-        <div class="detalhes-receita-corpo">
-            <div class="detalhes-receita">
-                <div class="detalhes-receita-titulo">
-                    <h3>Ingredientes</h3>
-                    <h4 class="botao-esconder">Esconder</h4>
-                </div>
-                <ul class="conteudo0">
-                    {% for linha in recipe.ingredients %}
-                        <li>{{linha}}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <div class="detalhes-receita">
-                <div class="detalhes-receita-titulo">
-                    <h3>Modo de preparo</h3>
-                    <h4 class="botao-esconder">Esconder</h4>
-                </div>
-                <ol class="conteudo1">
-                    {% for linha in recipe.preparation %}
-                        <li>{{linha}}</li>
-                    {% endfor %}
-                </ol>
-            </div>
-            <div class="detalhes-receita">
-                <div class="detalhes-receita-titulo">
-                    <h3>Informações adicionais</h3>
-                    <h4 class="botao-esconder">Esconder</h4>
-                </div>
-                <p class="conteudo2">{{recipe.information}}</p>
-            </div>
-        </div>
-        <script src="/script.js"></script>
+    <div class="detalhes-receita-header">
+        <img src="{{ recipe.image }}" alt="{{ recipe.title }}">
+        <h1>{{ recipe.title }}</h1>
+        <p>por {{ recipe.author }}</p>
     </div>
+    <div class="detalhes-receita-corpo">
+        <div class="detalhes-receita">
+            <div class="detalhes-receita-titulo">
+                <h3>Ingredientes</h3>
+                <h4 class="botao-esconder">Esconder</h4>
+            </div>
+            <ul class="conteudo0">
+                {% for linha in recipe.ingredients %}
+                    <li>{{linha}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="detalhes-receita">
+            <div class="detalhes-receita-titulo">
+                <h3>Modo de preparo</h3>
+                <h4 class="botao-esconder">Esconder</h4>
+            </div>
+            <ol class="conteudo1">
+                {% for linha in recipe.preparation %}
+                    <li>{{linha}}</li>
+                {% endfor %}
+            </ol>
+        </div>
+        <div class="detalhes-receita">
+            <div class="detalhes-receita-titulo">
+                <h3>Informações adicionais</h3>
+                <h4 class="botao-esconder">Esconder</h4>
+            </div>
+            <p class="conteudo2">{{recipe.information}}</p>
+        </div>
+    </div>
+    <script src="/script.js"></script>
 {% endblock %}
