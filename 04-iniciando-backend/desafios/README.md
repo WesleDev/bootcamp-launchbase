@@ -28,9 +28,9 @@
 
 ## :rocket: Desafios
 
-- [Primeiro servidor](https://github.com/imsantosrodrigo/bootcamp-launchbase/tree/master/04-iniciando-backend/desafios/desafio-03-1)
-- [Arquivos nunjucks e dados dinâmicos](https://github.com/imsantosrodrigo/bootcamp-launchbase/tree/master/04-iniciando-backend/desafios/desafio-03-2)
-- [Página de descrição do curso](https://github.com/imsantosrodrigo/bootcamp-launchbase/tree/master/04-iniciando-backend/desafios/desafio-03-3)
+- [Primeiro servidor](desafio-03-1)
+- [Arquivos nunjucks e dados dinâmicos](desafio-03-2)
+- [Página de descrição do curso](desafio-03-3)
 
 ## :calendar: Entrega
 
