@@ -1,0 +1,56 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+    <div class="card">
+        <section class="avatar" style="background: url({{ student.avatar_url }}) no-repeat center center / cover"></section>
+        <section class="details">
+            <h3>Detalhes</h3>
+            <div class="item">
+                <div>Nome Completo</div>
+                <div>{{ student.name }}</div>
+            </div>
+            <div class="item">
+                <div>Aniversário</div>
+                <div>{{ student.birth_date }}</div>
+            </div>
+            <div class="item">
+                <div>E-mail</div>
+                <div>{{ student.email }}</div>
+            </div>
+            <div class="item">
+                <div>Ano Escolar</div>
+                <div>{{ student.grade }}</div>
+            </div>
+            <div class="item">
+                <div>Carga Horária Semanal</div>
+                <div>
+                    {{ student.workload }}
+                </div>
+            </div>
+            <div class="item">
+                <div>Aluno de</div>
+                <div>{{ student.teacher_name }}</div>
+            </div>
+            <div class="button-edit">
+                <button>
+                    <a href="/students/{{ student.id }}/edit">Editar</a>
+                </button>
+            </div>
+            <div class="button-delete">
+                <form id="form-delete" method="POST" action="/students?_method=DELETE">
+                    <input type="hidden" name="id" value="{{ student.id }}">
+                    <button type="submit">Deletar</button>
+                </form>
+            </div>
+        </section>
+    </div>
+    <script>
+        const formDelete = document.querySelector('#form-delete');
+        formDelete.addEventListener('submit', function (event) {
+            const confirmation = confirm('Deseja Deletar?');
+            if (!confirmation) {
+                event.preventDefault();
+            }
+        });
+    </script>
+{% endblock content %}
