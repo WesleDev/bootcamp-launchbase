@@ -1,0 +1,40 @@
+{% extends "layout-admin.njk" %}
+
+{% block head %}
+    <title>Foodfy - Receitas</title>
+{% endblock %}
+
+{% block links %}
+    <a href="/admin/recipes" class="negrito-destaque-link">Receitas</a>
+    <a href="/admin/chefs">Chefs</a>
+{% endblock %}
+
+{% block header %}
+    <div class="group-button">
+        <div class="title-page">
+            <h1>Gerenciar Receitas</h1>
+        </div>
+        <div class="postion-button-action button-edit">
+            <a href="/admin/recipes/create">Cadastrar Receita</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="pratos-list-conteudo">
+        {% for recipe in recipes %}
+            <div class="prato-list-item">
+                <div class="prato-list-img">
+                    <img src="{{ recipe.image }}" alt="{{ recipe.title }}">
+                </div>
+                <div class="prato-list-info">
+                    <p class="prato-list-titulo">{{ recipe.title }}</p>
+                    <p class="prato-list-chef">por {{ recipe.chef_name }}</p>
+                    <div class="prato-list-visualizar">
+                        <a href="recipes/{{ recipe.id }}">Visualizar</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

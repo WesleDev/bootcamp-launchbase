@@ -1,0 +1,35 @@
+{% extends "layout-website.njk" %}
+
+{% block head %}
+    <title>Foodfy - Sobre</title>
+{% endblock %}
+
+{% block links %}
+    <a href="/website/sobre">Sobre</a>
+    <a href="/website/receitas">Receitas</a>
+    <a href="/website/chefs" class="negrito-destaque-link">Chefs</a>
+{% endblock %}
+
+{% block content %}
+    <div class="chefs-list-conteudo">
+        {% for chef in chefs %}
+            <div class="chef-list-item">
+                <div class="chef-list-img">
+                    <img src="{{ chef.avatar_url }}" alt="{{ chef.name }}">
+                </div>
+                <div class="chef-list-info">
+                    <p class="chef-list-titulo">{{ chef.name }}</p>
+                    <div class="chef-number-recipes">
+                        {% if chef.total_recipes == 0 %}
+                            <p>Sem receita</p>
+                        {% elif chef.total_recipes > 1 %}
+                            <p>{{ chef.total_recipes }} receitas</p>
+                        {% else %}
+                            <p>{{ chef.total_recipes }} receita</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

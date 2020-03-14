@@ -1,0 +1,36 @@
+{% extends "layout-website.njk" %}
+
+{% block head %}
+    <title>Foodfy - Receitas</title>
+{% endblock %}
+
+{% block links %}
+    <a href="/website/sobre">Sobre</a>
+    <a href="/website/receitas" class="negrito-destaque-link">Receitas</a>
+    <a href="/website/chefs">Chefs</a>
+    <div class="search-recipes">
+        <form action="/website/search" method="GET">
+            <input type="text" name="filter" placeholder="Buscar uma receita" value="{{ filter }}">
+            <button type="submit">Buscar</button>
+        </form>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="receitas">
+        <div class="receitas-titulo">
+            <p>Buscando por "{{ filter }}"</p>
+        </div>
+        <div class="pratos">
+            {% for recipe in recipes %}
+                <div class="prato-search">
+                    <a href="receita/{{ recipe.id }}">
+                        <img src="{{ recipe.image }}" alt="{{ recipe.title }}">
+                        <p class="prato-search-titulo">{{ recipe.title }}</p>
+                        <p class="prato-search-chef">por {{ recipe.chef_name }}</p>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "layout-website.njk" %}
+
+{% block links %}
+    <a href="/website/sobre">Sobre</a>
+    <a href="/website/receitas">Receitas</a>
+    <a href="/website/chefs">Chefs</a>
+    <div class="search-recipes">
+        <form action="/website/search" method="GET">
+            <input type="text" name="filter" placeholder="Buscar uma receita" value="{{ filter }}">
+            <button type="submit">Buscar</button>
+        </form>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="banner">
+        <div class="banner-texto">
+            <h1>As melhores receitas</h1>
+            <p>Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro.</p>
+        </div>
+        <div class="banner-imagem">
+            <img src="/img/chef.png" alt="Desenho de um Chef">
+        </div>
+    </div>
+    <div class="mais-acessadas">
+        <h2>Mais acessadas</h2>
+        <div class="pratos">
+            {% for recipe in recipes %}
+                {% if loop.index <= 6 %}
+                    <div class="prato prato-cursor">
+                        <img src="{{ recipe.image }}" alt="{{ recipe.title }}">
+                        <p class="prato-titulo">{{ recipe.title }}</p>
+                        <p class="prato-chef">por {{ recipe.chef_name }}</p>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<script src="/js/script.js"></script>
+{% endblock %}

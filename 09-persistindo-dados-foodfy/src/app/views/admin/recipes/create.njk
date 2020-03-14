@@ -1,0 +1,26 @@
+{% extends "layout-admin.njk" %}
+
+{% block head %}
+    <title>Foodfy - Criar Receita</title>
+{% endblock %}
+
+{% block links %}
+    <a href="/admin/recipes" class="negrito-destaque-link">Receitas</a>
+    <a href="/admin/chefs">Chefs</a>
+{% endblock %}
+
+{% block content %}
+    <form class="card" method="POST" action="/admin/recipes">
+        <div class="group-button">
+            <div class="title-page">
+                <h1>Criando Receita</h1>
+            </div>
+            <div class="postion-button-action">
+                <button type="submit" id="botao-salvar-receita">Salvar Receita</button>
+            </div>
+        </div>
+        <section class="details">
+            {% include "admin/recipes/fields.njk" %}
+        </section>
+    </form>
+{% endblock %}

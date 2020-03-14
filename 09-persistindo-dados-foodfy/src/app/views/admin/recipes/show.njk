@@ -1,0 +1,64 @@
+{% extends "layout-admin.njk" %}
+
+{% block head %}
+    <title>Foodfy -
+        {{ recipe.title }}</title>
+{% endblock %}
+
+{% block links %}
+    <a href="/admin/recipes" class="negrito-destaque-link">Receitas</a>
+    <a href="/admin/chefs">Chefs</a>
+{% endblock %}
+
+{% block header %}
+    <div class="group-button">
+        <div class="title-page">
+            <h1>Receita: {{ recipe.title }}</h1>
+        </div>
+        <div class="postion-button-action button-edit">
+            <a href="/admin/recipes/{{ recipe.id }}/edit">Editar Receita</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="detalhes-receita">
+        <div class="detalhes-receita-header">
+            <img src="{{ recipe.image }}" alt="{{ recipe.title }}">
+            <h1>{{ recipe.title }}</h1>
+            <p>por {{ recipe.chef_name }}</p>
+        </div>
+        <div class="detalhes-receita-corpo">
+            <div class="detalhes-receita">
+                <div class="detalhes-receita-titulo">
+                    <h3>Ingredientes</h3>
+                    <h4 class="botao-esconder">Esconder</h4>
+                </div>
+                <ul class="conteudo0">
+                    {% for item in recipe.ingredients %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="detalhes-receita">
+                <div class="detalhes-receita-titulo">
+                    <h3>Modo de preparo</h3>
+                    <h4 class="botao-esconder">Esconder</h4>
+                </div>
+                <ol class="conteudo1">
+                    {% for item in recipe.preparation %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
+                </ol>
+            </div>
+            <div class="detalhes-receita">
+                <div class="detalhes-receita-titulo">
+                    <h3>Informações adicionais</h3>
+                    <h4 class="botao-esconder">Esconder</h4>
+                </div>
+                <p class="conteudo2">{{ recipe.information }}</p>
+            </div>
+        </div>
+    </div>
+    <script src="/js/script.js"></script>
+{% endblock %}

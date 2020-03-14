@@ -1,0 +1,26 @@
+{% extends "layout-admin.njk" %}
+
+{% block head %}
+    <title>Foodfy - Cadastrar Chef</title>
+{% endblock %}
+
+{% block links %}
+    <a href="/admin/recipes">Receitas</a>
+    <a href="/admin/chefs" class="negrito-destaque-link">Chefs</a>
+{% endblock %}
+
+{% block content %}
+    <form class="card" method="POST" action="/admin/chefs">
+        <div class="group-button">
+            <div class="title-page">
+                <h1>Criando Chef</h1>
+            </div>
+            <div class="postion-button-action">
+                <button type="submit" id="botao-salvar-receita">Salvar Chef</button>
+            </div>
+        </div>
+        <section class="details">
+            {% include "admin/chefs/fields.njk" %}
+        </section>
+    </form>
+{% endblock %}
